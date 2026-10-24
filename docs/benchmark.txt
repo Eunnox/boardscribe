@@ -1,0 +1,40 @@
+BoardScribe benchmark: 20 synthetic games x 30 moves (rendered, not real footage)
+
+[baseline]
+                               selected frames    nearest frames
+first guess correct                     100.0%            100.0%
+accepted without asking                  97.2%             98.2%
+  of those, wrong                            0                 0
+questions / 100 moves                      2.8               1.8
+final move accuracy                     100.0%            100.0%
+games exactly right                      20/20             20/20
+moves with no steady frame                   0                 0
+frames decoded                            7355              1860
+(36200 video frames, 1860 kept: 19 video frames per kept frame)
+
+[stress]
+                               selected frames    nearest frames
+first guess correct                      99.5%            100.0%
+accepted without asking                  98.3%             98.2%
+  of those, wrong                            1                 0
+questions / 100 moves                      1.7               1.8
+final move accuracy                      99.7%            100.0%
+games exactly right                      19/20             20/20
+moves with no steady frame                   0                 0
+frames decoded                            7278              1860
+(36200 video frames, 1860 kept: 19 video frames per kept frame)
+
+[heavy_blur]
+                               selected frames    nearest frames
+first guess correct                      99.5%             72.0%
+accepted without asking                  98.5%             68.3%
+  of those, wrong                            0                 0
+questions / 100 moves                      1.5               6.3
+final move accuracy                      99.8%             72.8%
+games exactly right                      19/20             10/20
+moves with no steady frame                   0                 0
+frames decoded                            7278              1860
+(36200 video frames, 1860 kept: 19 video frames per kept frame)
+
+[rules engine alone]
+single wrong moves exposed by replay: 477/598 (79.8%), mean 5.0 plies later; the rest stay legal, so only evidence or a question can catch them
